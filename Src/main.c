@@ -93,9 +93,7 @@ int main(void)
   MX_DAC1_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-HAL_TIM_Base_Start(&htim2);
 
-HAL_DAC_Start(&hdac1, DAC_CHANNEL_2);
 
 
   /* USER CODE END 2 */
@@ -105,7 +103,9 @@ HAL_DAC_Start(&hdac1, DAC_CHANNEL_2);
   while (1)
   {
     /* USER CODE END WHILE */
+HAL_TIM_Base_Start(&htim2);
 
+HAL_DAC_Start(&hdac1, DAC_CHANNEL_2);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
